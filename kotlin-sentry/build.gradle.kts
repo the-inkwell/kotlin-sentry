@@ -40,10 +40,24 @@ kotlin {
             }
         }
 
-        val common by creating {
+        val commonMultiplatform by creating {
+            dependsOn(commonMain.get())
             dependencies {
                 implementation(libs.multiplatform.sentry)
             }
+        }
+
+        val commonStub by creating {
+            dependsOn(commonMain.get())
+        }
+
+        listOf(
+            jsMain,
+            linuxArm64Main,
+            linuxX64Main,
+            mingwX64Main
+        ).forEach {
+            it.get().dependsOn(commonStub)
         }
 
         listOf(
@@ -62,7 +76,7 @@ kotlin {
             macosArm64Main,
             macosX64Main
         ).forEach {
-            it.get().dependsOn(common)
+            it.get().dependsOn(commonMultiplatform)
         }
     }
 
