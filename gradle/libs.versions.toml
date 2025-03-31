@@ -1,0 +1,5 @@
+[versions]
+multiplatform-sentry = "0.11.0"
+
+[libraries]
+multiplatform-sentry = { module = "io.sentry:sentry-kotlin-multiplatform", version.ref = "multiplatform-sentry" }

@@ -1,0 +1,24 @@
+**/*.exec
+**/*.ec
+
+*.iml
+.gradle
+/local.properties
+.idea/*
+!.idea/fileTemplates/
+!.idea/codeStyles/
+!.idea/runConfigurations/
+.DS_Store
+/build
+/captures
+
+.kotlin
+
+gradle/extended
+
+**/build
+
+# VS Code files, ignoring those as they could probably be in conflict with AS
+.project
+.classpath
+.settings
