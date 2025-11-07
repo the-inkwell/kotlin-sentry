@@ -2,6 +2,7 @@ package eu.codlab.sentry.wrapper
 
 import eu.codlab.sentry.wrapper.protocol.to
 import eu.codlab.sentry.wrapper.protocol.toSdkVersion
+import io.sentry.kotlin.multiplatform.SentryEvent
 import io.sentry.kotlin.multiplatform.Sentry as ISentry
 
 actual object Sentry {

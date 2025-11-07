@@ -47,6 +47,20 @@ kotlin {
             }
         }
 
+        val jvmMain by getting {
+            dependsOn(commonMain.get())
+            dependencies {
+                implementation(libs.sentry.jvm)
+            }
+        }
+
+        val androidMain by getting {
+            dependsOn(commonMain.get())
+            dependencies {
+                implementation(libs.sentry.android)
+            }
+        }
+
         val commonStub by creating {
             dependsOn(commonMain.get())
         }
@@ -61,8 +75,6 @@ kotlin {
         }
 
         listOf(
-            androidMain,
-            jvmMain,
             iosArm64Main,
             iosSimulatorArm64Main,
             iosX64Main,

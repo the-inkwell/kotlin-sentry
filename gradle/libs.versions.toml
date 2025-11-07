@@ -1,5 +1,9 @@
 [versions]
-multiplatform-sentry = "0.11.0"
+multiplatform-sentry = "0.18.0"
+sentry-jvm = "8.21.1"
+sentry-android = "8.21.1"
 
 [libraries]
 multiplatform-sentry = { module = "io.sentry:sentry-kotlin-multiplatform", version.ref = "multiplatform-sentry" }
+sentry-jvm = { module = "io.sentry:sentry", version.ref = "sentry-jvm" }
+sentry-android = { module = "io.sentry:sentry-android", version.ref = "sentry-android" }
